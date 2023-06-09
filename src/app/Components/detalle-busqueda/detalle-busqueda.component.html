@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="backdrop" [style.background-image]="getBackdropPath()"></div>
+  <div class="row first-row">
+    <div class="col-md-6" *ngIf="detalle">
+      <div class="d-flex align-items-center">
+        <img *ngIf="logoUrl" [src]="logoUrl" [alt]="esPelicula ? detalle.title : detalle.name" class="img-fluid">
+        <h1 *ngIf="!logoUrl">{{ tipo === 'movie' ? detalle.title : detalle.name }}</h1>
+      </div>
+      <div class="info">
+        <div class="mt-3">
+          <button class="btn btn-outline-light" (click)="openTrailerModal()"><fa-icon
+              [icon]="faPlay"></fa-icon>&nbsp;&nbsp;Ver Trailer</button>
+          <button class="btn btn-outline-light rounded-circle" style="margin-left: 1rem;"><fa-icon
+              [icon]="faHeart"></fa-icon></button>
+        </div>
+        <p class="mt-3">{{ detalle.overview }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Selector-->
+  <div class="row">
+    <mat-divider></mat-divider>
+    <mat-chip-listbox [(ngModel)]="selectedTab" aria-label="Selector categoria"
+      (selectionChange)="reloadCarousel = false"> <mat-chip-option class="movie-button" value="similares"
+        selected>Similares</mat-chip-option>
+      <mat-chip-option class="movie-button" value="detalles">Detalles</mat-chip-option>
+    </mat-chip-listbox>
+  </div>
+
+  <!--Similares-->
+  <div class="row" *ngIf="selectedTab === 'similares' && peliculasSimilares.length > 0"><ng-container
+      *ngIf="reloadCarousel">
+      <app-carousel-similares-busqueda [peliculas]="peliculasSimilares" [detalles]="detalle"
+        [tipoEntrada]="tipo"></app-carousel-similares-busqueda>
+    </ng-container>
+  </div>
+
+  <!--Detalles-->
+  <div class="row" *ngIf="selectedTab === 'detalles'">
+    <div class="col-lg-6">
+      <h3 *ngIf="esPelicula">{{ detalle.title }}</h3>
+      <h3 *ngIf="esSerie">{{ detalle.name }}</h3>
+      <p>{{ detalle.overview }}</p>
+    </div>
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="col-sm-6">
+          <p *ngIf="esPelicula"><strong>Duración:</strong></p>
+          <p *ngIf="esPelicula">{{ getDuracionFormateada() }}</p>
+          <p *ngIf="esSerie"><strong>Primera emisión:</strong></p>
+          <p *ngIf="esSerie">{{ detalle.first_air_date | date:'dd/MM/yyyy' }}</p>
+          <p *ngIf="esPelicula"><strong>Fecha de estreno:</strong></p>
+          <p *ngIf="esPelicula">{{ detalle.release_date | date:'dd/MM/yyyy' }}</p>
+          <p *ngIf="esSerie"><strong>Última emisión:</strong></p>
+          <p *ngIf="esSerie">{{ detalle.last_air_date | date:'dd/MM/yyyy' }}</p>
+          <p><strong>Género:</strong></p>
+          <ul class="no-bullets">
+            <li *ngFor="let genre of detalle.genres">{{ genre.name }}</li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <p><strong>Reparto:</strong></p>
+          <ul class="no-bullets">
+            <li *ngFor="let actor of reparto">
+              <div class="row">
+                <div class="col-sm-4">
+                  <img class="actor-photo" [src]="'https://image.tmdb.org/t/p/w500/' + actor.profile_path"
+                    alt="{{ actor.name }}">
+                </div>
+                <div class="col-sm-8">
+                  <span><b>Actor:&nbsp;</b>{{ actor.name }}</span><br>
+                  <span><b>Personaje:&nbsp;</b>{{ actor.character }}</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
