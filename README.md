@@ -1,4 +1,4 @@
-# <img src="https://github.com/IESJandula/Filmmento/blob/main/src/assets/logos-filmmento_1024-02.png?raw=true" width="10%">
+<img src="https://github.com/IESJandula/Filmmento/blob/main/src/assets/logos-filmmento_1024-02.png?raw=true" width="10%">
 
 # Indice:
 - [¿Porqué Filmmento?](#porqué-filmmento)
