@@ -12,6 +12,19 @@ Con una interfaz minimalista, Filmmento te ofrece una navegación intuitiva y f�
 
 Así que, si eres un amante del cine y buscas una aplicación potente y llena de recursos para consultar tus películas favoritas, no dudes en descargar Filmmento. ¡Te aseguramos que no te arrepentirás! [Pruébalo aquí](https://main.d2ugbwj2mr8aez.amplifyapp.com/)
 
+## Cómo instalar
+
+Para utilizar Filmmento en tu entorno local, sigue los siguientes pasos:
+
+### Prerrequisitos
+
+- Asegúrate de tener [Node.js](https://nodejs.org) instalado en tu computadora.
+- Necesitarás tener [Angular CLI](https://angular.io/cli) instalado de forma global. Puedes instalarlo ejecutando el siguiente comando:
+
+  ```bash
+  npm install -g @angular/cli
+  ```
+  
 ## Organización
 
 ## Semana 1 (Orientativo) - 24/04/2023 - 30/04/2023
