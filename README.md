@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/IESJandula/Filmmento/blob/main/src/assets/logos-filmmento_1024-02.png?raw=true" width="15%">
+  <img src="https://github.com/IESJandula/Filmmento/blob/main/src/assets/logos-filmmento_1024-02.png?raw=true" width="25%">
 </p>
 
 # Indice:
