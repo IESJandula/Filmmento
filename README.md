@@ -1,5 +1,24 @@
 # Filmmento
 
+- [¿Porqué Filmmento?](#porqué-filmmento)
+- [Introducción](#introducción)
+- [Cómo instalar](#cómo-instalar)
+  - [Prerrequisitos](#prerrequisitos)
+  - [Pasos de instalación](#pasos-de-instalación)
+- [Organización](#organización)
+- [Requisitos funcionales](#requisitos-funcionales)
+  - [Autenticación de usuario](#autenticación-de-usuario)
+  - [Perfil de usuario](#perfil-de-usuario)
+  - [Lista de películas](#lista-de-películas)
+- [Tecnologías](#tecnologías)
+  - [Frontend](#frontend)
+  - [Backend](#backend-pendiente-de-implementar)
+  - [Despliegue de la web](#despliegue-de-la-web)
+- [Documentación](#documentación)
+  - [Documentación para el Frontend](#documentación-para-el-frontend)
+  - [Documentación para el Backend](#documentación-para-el-backend)
+  - [Documentación adicional](#documentación-adicional)
+
 ## ¿Porqué Filmmento?
 
 Es una combinación entre "Film" y "Memento", haciendo referencia las películas como recuerdos duraderos. 
