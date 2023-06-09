@@ -2,7 +2,7 @@
   <img src="https://github.com/IESJandula/Filmmento/blob/main/src/assets/logos-filmmento_1024-02.png?raw=true" width="35%">
 </p>
 
-# Indice:
+# Tabla de contenido
 - [¿Porqué Filmmento?](#porqué-filmmento)
 - [Introducción](#introducción)
 - [Cómo instalar](#cómo-instalar)
