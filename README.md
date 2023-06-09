@@ -20,10 +20,11 @@ Para utilizar Filmmento en tu entorno local, sigue los siguientes pasos:
 
 - Asegúrate de tener [Node.js](https://nodejs.org) instalado en tu computadora.
 - Necesitarás tener [Angular CLI](https://angular.io/cli) instalado de forma global. Puedes instalarlo ejecutando el siguiente comando:
-  ```bash
-  npm install -g @angular/cli
-  ```
-  
+
+```
+bashnpm install -g @angular/cli
+```
+
 ### Pasos de instalación
 
 - Clona este repositorio o descarga el código fuente de Filmmento en tu máquina local.
